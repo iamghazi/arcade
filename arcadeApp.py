@@ -137,9 +137,9 @@ class ArcadeApp:
                 # check if target is touching the launcher
                 if (self.launcher \
                     and 0 <= abs(target.getX() -\
-                    self.launcher.getX()) <= 5\
+                    self.launcher.getX()) <= 7.5\
                     and 0 <= abs(target.getY() - \
-                    self.launcher.getY()) <= 4.5):
+                    self.launcher.getY()) <= 7):
 
                     self.launcher.undraw()
                     self.launcher = None
@@ -150,9 +150,9 @@ class ArcadeApp:
                     # check if target was hit by bullet
                     for bullet in self.bullets:
                         if 0 <= abs(target.getX() - \
-                            bullet.getX()) <= 5\
+                            bullet.getX()) <= 6\
                             and 0 <= abs(target.getY() -\
-                            bullet.getY()) <= 4.5:
+                            bullet.getY()) <= 5.5:
                             
                             bullet.undraw()
                             self.bullets.remove(bullet)
